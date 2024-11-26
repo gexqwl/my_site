@@ -11,5 +11,41 @@ h2 {
     text-align: center;
 }
 p {color: rgb(38, 11, 51);
-    font-size: 20p;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    float: left;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+#info1 {
+    background-color: rgb(45, 0, 87);
+}
+#info2 {
+    background-color: rgb(95, 41, 145);
+}
+#info3 {
+    background-color: rgb(44, 21, 58);
+}
+.my_button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: rgb(25, 5, 43);
+    background-color: rgb(147, 90, 201);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+.my_button:hover {
+    background-color: rgb(57, 35, 78);
+}
+.my_button:active {
+    background-color: rgb(110, 0, 212);
+    transform: scale(0.95);
 }

@@ -81,7 +81,12 @@
     <br>
     <a href="#start">Вернуться в начало</a>
     <br>
-    <button class="my_button">Нажми на меня</button>
+    <button class="my_button" id="myButton">Нажми на меня</button>
+    <script>
+        document.getElementById('myButton').onclick = function() {
+            alert('Рады видеть Вас на нашем сайте!');
+        };
+    </script>
     </aside>
         </main>
         <footer>
@@ -93,6 +98,39 @@
         target="_blank">Telegram Бобыревой Ангелины Романовны</a>
 
         </footer>
+        <h2>Больше книг Анны Джейн</h2>
+        <img id="slider" src="" alt="Изображение" width="194" height="250">
+        <br>
+        <button class="my_button" onclick="previousImage()">Предыдущее</button>
+        <button class="my_button" onclick="nextImage()">Следующее</button>
+        <script>
+            const images = [
+                'images/восхитительная ведьма 2.jfif',
+                'images/восхитительная ведьма.jpg',
+                'images/любовь ненависть подарочное.webp',
+                'images/любовь ненависть.webp',
+                'images/мы искры.jfif',
+                'images/подарок ангела.jpg',
+                'images/поклонник.webp',
+                'images/разреши любить.jfif',
+            ];
+            let currentIndex = 0;
+            function updateImage() {
+                const slider = document.getElementById('slider');
+                slider.src = images[currentIndex];
+            }
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateImage();
+            }
+            function previousImage() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateImage();
+            }
+            updateImage();
+        </script>
+        <h2>Заключение</h2>
+        <p>Книги - это очень интересно и полезно!</p>
    </body>
 </html>
 
